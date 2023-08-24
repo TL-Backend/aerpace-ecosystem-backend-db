@@ -1,0 +1,31 @@
+{
+  "name": "aerpace-ecosysytem-backend-db",
+  "version": "1.0.0",
+  "description": "Data base repository for project aerpace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db-migrate": "npx sequelize-cli db:migrate",
+    "db-undo-all": "npx sequelize-cli db:migrate:undo:all",
+    "db-undo-file": "npx sequelize-cli db:migrate:undo --name"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TL-Backend/aerpace-ecosysytem-backend-db.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TL-Backend/aerpace-ecosysytem-backend-db/issues"
+  },
+  "homepage": "https://github.com/TL-Backend/aerpace-ecosysytem-backend-db#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "dotnet": "^1.1.4",
+    "pg": "^8.11.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.32.1",
+    "sequelize-cli": "^6.6.1"
+  }
+}
