@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class aergov_roles extends Model {
     /**
@@ -13,21 +11,24 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_roles.init({
-    id: {
-      type: DataTypes.STRING,
-      primaryKey: true,
-      unique: true,
-      allowNull: false
+  aergov_roles.init(
+    {
+      id: {
+        type: DataTypes.STRING,
+        primaryKey: true,
+        unique: true,
+        allowNull: false,
+      },
+      role_name: DataTypes.STRING,
+      permission_list: DataTypes.JSONB,
+      permission_tree: DataTypes.JSONB,
+      created_at: DataTypes.DATE,
+      updated_at: DataTypes.DATE,
     },
-    role_name: DataTypes.STRING,
-    permission_list: DataTypes.JSONB,
-    permission_tree: DataTypes.JSONB,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE
-  }, {
-    sequelize,
-    modelName: 'aergov_roles',
-  });
+    {
+      sequelize,
+      modelName: 'aergov_roles',
+    },
+  );
   return aergov_roles;
 };

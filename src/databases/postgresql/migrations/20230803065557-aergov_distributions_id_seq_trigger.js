@@ -2,15 +2,14 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
-
+  async up(queryInterface, Sequelize) {
     const addTriggerQuery = `
     CREATE TRIGGER aergov_distributions_id_seq_trigger
     BEFORE INSERT ON aergov_distributions
     FOR EACH ROW
     EXECUTE FUNCTION aergov_distributions_set_id_function();
     `;
-    
+
     await queryInterface.sequelize.query(addTriggerQuery);
     /**
      * Add altering commands here.
@@ -20,9 +19,7 @@ module.exports = {
      */
   },
 
-  async down (queryInterface, Sequelize) {
-
-
+  async down(queryInterface, Sequelize) {
     const dropTriggerQuery = `
       DROP TRIGGER IF EXISTS aergov_distributions_id_seq_trigger ON aergov_distributions;
     `;
@@ -34,5 +31,5 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-  }
+  },
 };

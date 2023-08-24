@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class aergov_distributions extends Model {
     /**
@@ -13,24 +11,27 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_distributions.init({
-    id: {
-      type: DataTypes.STRING,
-      primaryKey: true,
-      unique: true,
-      allowNull: false
+  aergov_distributions.init(
+    {
+      id: {
+        type: DataTypes.STRING,
+        primaryKey: true,
+        unique: true,
+        allowNull: false,
+      },
+      user_id: DataTypes.STRING,
+      name: DataTypes.STRING,
+      region: DataTypes.STRING,
+      email: DataTypes.STRING,
+      phone_number: DataTypes.STRING,
+      address: DataTypes.JSONB,
+      created_at: DataTypes.DATE,
+      updated_at: DataTypes.DATE,
     },
-    user_id: DataTypes.STRING,
-    name: DataTypes.STRING,
-    region: DataTypes.STRING,
-    email: DataTypes.STRING,
-    phone_number: DataTypes.STRING,
-    address: DataTypes.JSONB,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE
-  }, {
-    sequelize,
-    modelName: 'aergov_distributions',
-  });
+    {
+      sequelize,
+      modelName: 'aergov_distributions',
+    },
+  );
   return aergov_distributions;
 };

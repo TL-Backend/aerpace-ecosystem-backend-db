@@ -2,8 +2,7 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
-
+  async up(queryInterface, Sequelize) {
     const createFunctionQuery = `
     CREATE OR REPLACE FUNCTION aergov_distributions_set_id_function()
     RETURNS TRIGGER AS
@@ -20,7 +19,6 @@ module.exports = {
     LANGUAGE plpgsql;
     `;
 
-
     await queryInterface.sequelize.query(createFunctionQuery);
     /**
      * Add altering commands here.
@@ -30,9 +28,7 @@ module.exports = {
      */
   },
 
-  async down (queryInterface, Sequelize) {
-
-
+  async down(queryInterface, Sequelize) {
     const dropFunctionQuery = `
       DROP FUNCTION IF EXISTS aergov_distributions_set_id_function();
     `;
@@ -44,5 +40,5 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-  }
+  },
 };

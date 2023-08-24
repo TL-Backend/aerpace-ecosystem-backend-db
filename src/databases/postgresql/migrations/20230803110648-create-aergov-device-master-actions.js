@@ -7,29 +7,29 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       action_name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       action_identifier: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       device_type: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       category_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       createdAt: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('aergov_device_master_actions');
-  }
+  },
 };

@@ -7,26 +7,26 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.STRING,
-        unique: true
+        unique: true,
       },
       role_name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       permission_list: {
-        type: Sequelize.JSONB
+        type: Sequelize.JSONB,
       },
       permission_tree: {
-        type: Sequelize.JSONB
+        type: Sequelize.JSONB,
       },
       created_at: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updated_at: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
     });
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('aergov_roles');
-  }
+  },
 };

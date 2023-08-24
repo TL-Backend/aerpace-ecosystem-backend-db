@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class aergov_portal_pages extends Model {
     /**
@@ -13,24 +11,26 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_portal_pages.init({
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-      unique: true,
+  aergov_portal_pages.init(
+    {
+      id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+        unique: true,
+      },
+      name: DataTypes.STRING,
+      parent_id: DataTypes.INTEGER,
+      identifier: DataTypes.STRING,
+      route: DataTypes.STRING,
+      created_at: DataTypes.DATE,
+      updated_at: DataTypes.DATE,
     },
-    name: DataTypes.STRING,
-    parent_id: DataTypes.INTEGER,
-    identifier: DataTypes.STRING,
-    route: DataTypes.STRING,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE
-  },
-  {
-    sequelize,
-    modelName: 'aergov_portal_pages',
-  });
+    {
+      sequelize,
+      modelName: 'aergov_portal_pages',
+    },
+  );
   return aergov_portal_pages;
 };
