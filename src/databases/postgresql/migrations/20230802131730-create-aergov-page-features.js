@@ -8,29 +8,29 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
-        unique: true
+        unique: true,
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       page_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       identifier: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       route: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       created_at: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updated_at: {
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('aergov_page_features');
-  }
+  },
 };

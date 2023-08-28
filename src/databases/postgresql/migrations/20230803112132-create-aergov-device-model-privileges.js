@@ -7,32 +7,32 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       model_id: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       variant_id: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       version_id: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       user_type: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       privileges: {
-        type: Sequelize.JSONB
+        type: Sequelize.JSONB,
       },
       created_at: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updated_at: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
     });
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('aergov_device_model_privileges');
-  }
+  },
 };

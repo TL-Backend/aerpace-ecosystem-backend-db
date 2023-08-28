@@ -2,13 +2,12 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
-
+  async up(queryInterface, Sequelize) {
     const createSequel = `
     CREATE SEQUENCE aergov_users_id_seq;
     `;
 
-    await queryInterface.sequelize.query(createSequel)
+    await queryInterface.sequelize.query(createSequel);
     /**
      * Add altering commands here.
      *
@@ -17,8 +16,7 @@ module.exports = {
      */
   },
 
-  async down (queryInterface, Sequelize) {
-
+  async down(queryInterface, Sequelize) {
     const dropSequel = `
     DROP SEQUENCE IF EXISTS aergov_users_id_seq;
     `;
@@ -30,5 +28,5 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-  }
+  },
 };
