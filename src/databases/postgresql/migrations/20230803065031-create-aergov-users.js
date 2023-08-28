@@ -24,6 +24,9 @@ module.exports = {
       country_code: {
         type: Sequelize.STRING,
       },
+      password: {
+        type: Sequelize.STRING,
+      },
       distributor_id: {
         type: Sequelize.STRING,
       },
