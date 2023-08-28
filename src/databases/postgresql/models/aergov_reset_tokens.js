@@ -12,7 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   aergov_reset_tokens.init({
-    uuid: DataTypes.UUID,
+    uuid: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      allowNull: false,
+      unique: true
+    },
     user_id: DataTypes.STRING,
     status: DataTypes.STRING,
     expiry: DataTypes.DATE,
