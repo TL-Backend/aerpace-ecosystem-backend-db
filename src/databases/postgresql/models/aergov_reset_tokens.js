@@ -11,19 +11,17 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_reset_tokens.init(
-    {
-      uuid: DataTypes.UUID,
-      user_id: DataTypes.STRING,
-      status: DataTypes.STRING,
-      expiry: DataTypes.DATE,
-      created_at: DataTypes.DATE,
-      updated_at: DataTypes.DATE,
-    },
-    {
-      sequelize,
-      modelName: 'aergov_reset_tokens',
-    },
-  );
+  aergov_reset_tokens.init({
+    uuid: DataTypes.UUID,
+    user_id: DataTypes.STRING,
+    status: DataTypes.STRING,
+    expiry: DataTypes.DATE,
+    created_at: DataTypes.DATE,
+    updated_at: DataTypes.DATE
+  }, {
+    sequelize,
+    modelName: 'aergov_reset_tokens',
+    underscored: true
+  });
   return aergov_reset_tokens;
 };

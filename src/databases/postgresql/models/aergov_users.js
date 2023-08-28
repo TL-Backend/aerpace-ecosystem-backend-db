@@ -11,31 +11,28 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_users.init(
-    {
-      id: {
-        type: DataTypes.STRING,
-        primaryKey: true,
-        unique: true,
-        allowNull: false,
-      },
-      first_name: DataTypes.STRING,
-      last_name: DataTypes.STRING,
-      email: DataTypes.STRING,
-      phone_number: DataTypes.STRING,
-      country_code: DataTypes.STRING,
-      distributor_id: DataTypes.STRING,
-      user_type: DataTypes.STRING,
-      address: DataTypes.STRING,
-      first_name: DataTypes.STRING,
-      first_name: DataTypes.STRING,
-      created_at: DataTypes.DATE,
-      updated_at: DataTypes.DATE,
+  aergov_users.init({
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      unique: true,
     },
-    {
-      sequelize,
-      modelName: 'aergov_users',
-    },
-  );
+    first_name: DataTypes.STRING,
+    last_name: DataTypes.STRING,
+    email: DataTypes.STRING,
+    phone_number: DataTypes.STRING,
+    country_code: DataTypes.STRING,
+    distributor_id: DataTypes.STRING,
+    user_type: DataTypes.STRING,
+    address: DataTypes.STRING,
+    first_name: DataTypes.STRING,
+    first_name: DataTypes.STRING,
+    created_at: DataTypes.DATE,
+    updated_at: DataTypes.DATE
+  }, {
+    sequelize,
+    modelName: 'aergov_users',
+    underscored: true
+  });
   return aergov_users;
 };

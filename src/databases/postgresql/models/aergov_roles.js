@@ -11,24 +11,21 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_roles.init(
-    {
-      id: {
-        type: DataTypes.STRING,
-        primaryKey: true,
-        unique: true,
-        allowNull: false,
-      },
-      role_name: DataTypes.STRING,
-      permission_list: DataTypes.JSONB,
-      permission_tree: DataTypes.JSONB,
-      created_at: DataTypes.DATE,
-      updated_at: DataTypes.DATE,
+  aergov_roles.init({
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      unique: true,
     },
-    {
-      sequelize,
-      modelName: 'aergov_roles',
-    },
-  );
+    role_name: DataTypes.STRING,
+    permission_list: DataTypes.JSONB,
+    permission_tree: DataTypes.JSONB,
+    created_at: DataTypes.DATE,
+    updated_at: DataTypes.DATE
+  }, {
+    sequelize,
+    modelName: 'aergov_roles',
+    underscored: true
+  });
   return aergov_roles;
 };

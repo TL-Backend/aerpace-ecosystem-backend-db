@@ -11,27 +11,24 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_distributions.init(
-    {
-      id: {
-        type: DataTypes.STRING,
-        primaryKey: true,
-        unique: true,
-        allowNull: false,
-      },
-      user_id: DataTypes.STRING,
-      name: DataTypes.STRING,
-      region: DataTypes.STRING,
-      email: DataTypes.STRING,
-      phone_number: DataTypes.STRING,
-      address: DataTypes.JSONB,
-      created_at: DataTypes.DATE,
-      updated_at: DataTypes.DATE,
+  aergov_distributions.init({
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      unique: true,
     },
-    {
-      sequelize,
-      modelName: 'aergov_distributions',
-    },
-  );
+    user_id: DataTypes.STRING,
+    name: DataTypes.STRING,
+    region: DataTypes.STRING,
+    email: DataTypes.STRING,
+    phone_number: DataTypes.STRING,
+    address: DataTypes.JSONB,
+    created_at: DataTypes.DATE,
+    updated_at: DataTypes.DATE
+  }, {
+    sequelize,
+    modelName: 'aergov_distributions',
+    underscored: true
+  });
   return aergov_distributions;
 };

@@ -11,26 +11,24 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_portal_pages.init(
-    {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-        unique: true,
-      },
-      name: DataTypes.STRING,
-      parent_id: DataTypes.INTEGER,
-      identifier: DataTypes.STRING,
-      route: DataTypes.STRING,
-      created_at: DataTypes.DATE,
-      updated_at: DataTypes.DATE,
+  aergov_portal_pages.init({
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      unique: true,
     },
-    {
-      sequelize,
-      modelName: 'aergov_portal_pages',
-    },
-  );
+    name: DataTypes.STRING,
+    parent_id: DataTypes.INTEGER,
+    identifier: DataTypes.STRING,
+    route: DataTypes.STRING,
+    created_at: DataTypes.DATE,
+    updated_at: DataTypes.DATE
+  },
+  {
+    sequelize,
+    modelName: 'aergov_portal_pages',
+    underscored: true
+  });
   return aergov_portal_pages;
 };

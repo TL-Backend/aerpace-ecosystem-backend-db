@@ -11,29 +11,26 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_device_users.init(
-    {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: DataTypes.INTEGER,
-      },
-      device_id: DataTypes.INTEGER,
-      privilege_id: DataTypes.INTEGER,
-      model_id: DataTypes.STRING,
-      variant_id: DataTypes.STRING,
-      version_id: DataTypes.STRING,
-      user_type: DataTypes.STRING,
-      member_id: DataTypes.STRING,
-      distribution_id: DataTypes.STRING,
-      created_at: DataTypes.DATE,
-      updated_id: DataTypes.DATE,
+  aergov_device_users.init({
+    id: {
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER
     },
-    {
-      sequelize,
-      modelName: 'aergov_device_users',
-    },
-  );
+    device_id: DataTypes.INTEGER,
+    privilege_id: DataTypes.INTEGER,
+    model_id: DataTypes.STRING,
+    variant_id: DataTypes.STRING,
+    version_id: DataTypes.STRING,
+    user_type: DataTypes.STRING,
+    member_id: DataTypes.STRING,
+    distribution_id: DataTypes.STRING,
+    created_at: DataTypes.DATE,
+    updated_id: DataTypes.DATE
+  }, {
+    sequelize,
+    modelName: 'aergov_device_users',
+    underscored: true
+  });
   return aergov_device_users;
 };

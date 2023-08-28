@@ -11,23 +11,20 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_device_master_actions.init(
-    {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: DataTypes.INTEGER,
-      },
-      action_name: DataTypes.STRING,
-      action_identifier: DataTypes.STRING,
-      device_type: DataTypes.STRING,
-      category_id: DataTypes.INTEGER,
+  aergov_device_master_actions.init({
+    id: {
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER
     },
-    {
-      sequelize,
-      modelName: 'aergov_device_master_actions',
-    },
-  );
+    action_name: DataTypes.STRING,
+    action_identifier: DataTypes.STRING,
+    device_type: DataTypes.STRING,
+    category_id: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'aergov_device_master_actions',
+    underscored: true
+  });
   return aergov_device_master_actions;
 };

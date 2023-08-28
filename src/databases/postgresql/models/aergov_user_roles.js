@@ -11,24 +11,21 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  aergov_user_roles.init(
-    {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: DataTypes.INTEGER,
-        unique: true,
-      },
-      user_id: DataTypes.STRING,
-      role_id: DataTypes.STRING,
-      created_at: DataTypes.DATE,
-      updated_at: DataTypes.DATE,
+  aergov_user_roles.init({
+    id: {
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER,
+      unique: true
     },
-    {
-      sequelize,
-      modelName: 'aergov_user_roles',
-    },
-  );
+    user_id: DataTypes.STRING,
+    role_id: DataTypes.STRING,
+    created_at: DataTypes.DATE,
+    updated_at: DataTypes.DATE
+  }, {
+    sequelize,
+    modelName: 'aergov_user_roles',
+    underscored: true
+  });
   return aergov_user_roles;
 };
