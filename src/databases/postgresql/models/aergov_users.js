@@ -25,8 +25,8 @@ module.exports = (sequelize, DataTypes) => {
     distributor_id: DataTypes.STRING,
     user_type: DataTypes.STRING,
     address: DataTypes.STRING,
-    first_name: DataTypes.STRING,
-    first_name: DataTypes.STRING,
+    state: DataTypes.STRING,
+    pin_code: DataTypes.STRING,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE
   }, {
