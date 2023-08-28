@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       primaryKey: true,
       unique: true,
-      allowNull: false
     },
     user_id: DataTypes.STRING,
     name: DataTypes.STRING,
@@ -31,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'aergov_distributions',
+    underscored: true
   });
   return aergov_distributions;
 };

@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'aergov_reset_tokens',
+    underscored: true
   });
   return aergov_reset_tokens;
 };

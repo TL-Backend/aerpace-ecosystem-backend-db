@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       primaryKey: true,
       unique: true,
-      allowNull: false
     },
     role_name: DataTypes.STRING,
     permission_list: DataTypes.JSONB,
@@ -28,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'aergov_roles',
+    underscored: true
   });
   return aergov_roles;
 };

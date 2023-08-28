@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   aergov_user_roles.init({
     id: {
-      allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER,
@@ -28,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'aergov_user_roles',
+    underscored: true
   });
   return aergov_user_roles;
 };

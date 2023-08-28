@@ -16,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
   aergov_portal_pages.init({
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
       unique: true,
@@ -31,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
   {
     sequelize,
     modelName: 'aergov_portal_pages',
+    underscored: true
   });
   return aergov_portal_pages;
 };
