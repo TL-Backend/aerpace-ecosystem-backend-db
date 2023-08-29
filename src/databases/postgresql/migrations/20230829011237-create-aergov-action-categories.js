@@ -6,6 +6,7 @@ module.exports = {
       id: {
         allowNull: false,
         primaryKey: true,
+        autoIncrement: true,
         type: Sequelize.INTEGER,
         unique: true,
       },
@@ -18,14 +19,6 @@ module.exports = {
       device_type: {
         type: Sequelize.STRING
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
     });
   },
   async down(queryInterface, Sequelize) {

@@ -5,9 +5,10 @@ module.exports = {
     await queryInterface.createTable('aergov_device_master_actions', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
+        autoIncrement: true,
         type: Sequelize.INTEGER,
+        unique: true,
       },
       action_name: {
         type: Sequelize.STRING,
@@ -20,12 +21,6 @@ module.exports = {
       },
       category_id: {
         type: Sequelize.INTEGER,
-      },
-      createdAt: {
-        type: Sequelize.DATE,
-      },
-      updatedAt: {
-        type: Sequelize.DATE,
       },
     });
   },
