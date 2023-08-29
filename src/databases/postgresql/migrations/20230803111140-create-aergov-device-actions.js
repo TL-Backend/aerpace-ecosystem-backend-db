@@ -5,9 +5,10 @@ module.exports = {
     await queryInterface.createTable('aergov_device_actions', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
+        autoIncrement: true,
         type: Sequelize.INTEGER,
+        unique: true,
       },
       action_id: {
         type: Sequelize.INTEGER,
