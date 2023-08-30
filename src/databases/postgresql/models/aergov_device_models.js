@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING
     },
     name: DataTypes.STRING,
+    status: DataTypes.STRING,
     device_type: DataTypes.STRING,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE

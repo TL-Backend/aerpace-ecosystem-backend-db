@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     model_id: DataTypes.STRING,
     variant_id: DataTypes.STRING,
+    status: DataTypes.STRING,
     device_type: DataTypes.STRING,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE

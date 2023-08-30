@@ -15,6 +15,9 @@ module.exports = {
       device_type: {
         type: Sequelize.STRING
       },
+      status: {
+        type: Sequelize.STRING
+      },
       created_at: {
         type: Sequelize.DATE
       },
