@@ -23,11 +23,16 @@ module.exports = (sequelize, DataTypes) => {
     phone_number: DataTypes.STRING,
     country_code: DataTypes.STRING,
     distributor_id: DataTypes.STRING,
-    password:DataTypes.STRING,
+    password: DataTypes.STRING,
+    profile_url: DataTypes.STRING,
     user_type: DataTypes.STRING,
     address: DataTypes.STRING,
     state: DataTypes.STRING,
     pin_code: DataTypes.STRING,
+    first_time_login: {
+      type: DataTypes.INTEGER,
+      defaultValue: 1
+    },
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE
   }, {
