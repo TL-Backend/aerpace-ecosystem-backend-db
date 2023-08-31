@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     country_code: DataTypes.STRING,
     distributor_id: DataTypes.STRING,
     password:DataTypes.STRING,
+    profile_url:DataTypes.STRING,
     user_type: DataTypes.STRING,
     address: DataTypes.STRING,
     state: DataTypes.STRING,
