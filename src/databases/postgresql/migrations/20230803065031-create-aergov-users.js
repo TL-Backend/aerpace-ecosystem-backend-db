@@ -30,7 +30,7 @@ module.exports = {
       profile_url: {
         type: Sequelize.STRING
       },
-      distributor_id: {
+      distribution_id: {
         type: Sequelize.STRING,
       },
       user_type: {
