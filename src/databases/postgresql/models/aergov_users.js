@@ -29,6 +29,10 @@ module.exports = (sequelize, DataTypes) => {
     address: DataTypes.STRING,
     state: DataTypes.STRING,
     pin_code: DataTypes.STRING,
+    first_time_login: {
+      type: DataTypes.INTEGER,
+      defaultValue: 1
+    },
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE
   }, {

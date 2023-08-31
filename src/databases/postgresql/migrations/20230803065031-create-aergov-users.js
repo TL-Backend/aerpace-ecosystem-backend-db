@@ -45,6 +45,10 @@ module.exports = {
       pin_code: {
         type: Sequelize.STRING,
       },
+      first_time_login: {
+        type: Sequelize.INTEGER,
+        defaultValue: 1
+      },
       created_at: {
         type: Sequelize.DATE,
       },
