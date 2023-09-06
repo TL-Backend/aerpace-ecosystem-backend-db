@@ -3,7 +3,8 @@ exports.constants = {
     USER_TYPES: ["STAFF", "MEMBER"],
     DEVICE_STATUS: ["ACTIVE", "INACTIVE", "DRAFT"],
     PERSONALITIES: ["OWNER", "GUEST", "DRIVER"],
-    DEVICE_LEVELS: ["MODEL", "VARIANTS", "VERSIONS"]
+    DEVICE_LEVELS: ["MODEL", "VARIANTS", "VERSIONS"],
+    APP_TYPES: ["ADMIN_PORTAL","MOBILE_APP"]
 }
 
 exports.defaultValues = {
