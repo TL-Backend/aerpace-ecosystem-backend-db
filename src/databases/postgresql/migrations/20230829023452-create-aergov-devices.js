@@ -28,7 +28,7 @@ module.exports = {
       version_id: {
         type: Sequelize.STRING
       },
-      distributor_id: {
+      distribution_id: {
         type: Sequelize.STRING
       },
       mac_number: {

@@ -20,8 +20,13 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER
     },
     file_name: DataTypes.STRING,
+    input_file: DataTypes.STRING,
+    status: DataTypes.STRING,
+    input_file_response: DataTypes.STRING,
     uploaded_by: DataTypes.STRING,
-    uploaded_at: DataTypes.DATE
+    uploaded_at: DataTypes.DATE,
+    created_at: DataTypes.DATE,
+    updated_at: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'aergov_device_import_histories',
