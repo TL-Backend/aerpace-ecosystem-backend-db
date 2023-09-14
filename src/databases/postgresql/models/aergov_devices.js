@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     model_id: DataTypes.STRING,
     variant_id: DataTypes.STRING,
     version_id: DataTypes.STRING,
-    distributor_id: DataTypes.STRING,
+    distribution_id: DataTypes.STRING,
     mac_number: DataTypes.STRING,
     color: DataTypes.STRING,
     device_type: DataTypes.STRING,
