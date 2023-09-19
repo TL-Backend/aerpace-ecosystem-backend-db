@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     file_name: DataTypes.STRING,
     input_file: DataTypes.STRING,
     status: DataTypes.STRING,
+    source_file_id: DataTypes.STRING,
     input_file_response: DataTypes.STRING,
     uploaded_by: DataTypes.STRING,
     uploaded_at: DataTypes.DATE,

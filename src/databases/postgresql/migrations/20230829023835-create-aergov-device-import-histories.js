@@ -19,6 +19,9 @@ module.exports = {
       status: {
         type: Sequelize.STRING
       },
+      source_file_id: {
+        type: Sequelize.STRING
+      },
       input_file_response: {
         type: Sequelize.STRING
       },
