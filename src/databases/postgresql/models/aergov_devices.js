@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     mac_number: DataTypes.STRING,
     color: DataTypes.STRING,
     device_type: DataTypes.STRING,
+    source_file_id: DataTypes.STRING,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE
   }, {

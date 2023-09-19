@@ -40,6 +40,9 @@ module.exports = {
       device_type: {
         type: Sequelize.STRING
       },
+      source_file_id: {
+        type: Sequelize.STRING
+      },
       created_at: {
         type: Sequelize.DATE
       },
