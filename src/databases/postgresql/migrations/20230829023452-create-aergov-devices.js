@@ -41,7 +41,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       source_file_id: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       created_at: {
         type: Sequelize.DATE
