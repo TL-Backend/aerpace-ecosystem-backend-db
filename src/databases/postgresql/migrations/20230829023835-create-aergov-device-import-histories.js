@@ -19,7 +19,7 @@ module.exports = {
       status: {
         type: Sequelize.STRING
       },
-      input_file_response: {
+      response_file: {
         type: Sequelize.STRING
       },
       uploaded_by: {
