@@ -21,6 +21,9 @@ module.exports = {
       email: {
         type: Sequelize.STRING,
       },
+      country_code: {
+        type: Sequelize.STRING,
+      },
       phone_number: {
         type: Sequelize.STRING,
       },
