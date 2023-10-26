@@ -8,6 +8,10 @@ exports.constants = {
 }
 
 exports.defaultValues = {
-    DEFAULT_PAGE_LIMIT: 10,
-    DEFAULT_PAGE_NUMBER: 1,
+    DEFAULT_PAGE_LIMIT: '10',
+    DEFAULT_PAGE_NUMBER: '1',
+}
+
+exports.dbTables = {
+    USERS_TABLE: `aergov_users`
 }
