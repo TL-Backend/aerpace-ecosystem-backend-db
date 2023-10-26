@@ -27,9 +27,6 @@ module.exports = {
       password: {
         type: Sequelize.STRING,
       },
-      profile_url: {
-        type: Sequelize.STRING
-      },
       distribution_id: {
         type: Sequelize.STRING,
       },
