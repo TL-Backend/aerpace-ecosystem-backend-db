@@ -5,7 +5,5 @@ exports.getPaginationQuery = ({ pageLimit, pageNumber }) => {
     pageNumber || defaultValues.DEFAULT_PAGE_NUMBER
   )}-1)*${parseInt(
     pageLimit || defaultValues.DEFAULT_PAGE_LIMIT
-  )}) ROWS FETCH NEXT ${parseInt(
-    pageLimit || defaultValues.DEFAULT_PAGE_LIMIT
-  )} ROWS ONLY`;
+  )}) ROWS LIMIT ${pageLimit}`;
 };
