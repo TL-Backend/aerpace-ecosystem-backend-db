@@ -1,5 +1,5 @@
 exports.constants = {
-    DEVICE_TYPES: ["CAR", "DRONE"],
+    DEVICE_TYPES: ["CAR", "DRONE", "SOLAR_PANEL"],
     USER_TYPES: ["STAFF", "MEMBER"],
     DEVICE_STATUS: ["ACTIVE", "INACTIVE", "DRAFT"],
     PERSONALITIES: ["OWNER", "GUEST", "DRIVER"],
