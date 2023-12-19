@@ -22,6 +22,12 @@ module.exports = {
       category_id: {
         type: Sequelize.INTEGER,
       },
+      created_at: {
+        type: Sequelize.DATE,
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {

@@ -19,6 +19,12 @@ module.exports = {
       device_type: {
         type: Sequelize.STRING
       },
+      created_at: {
+        type: Sequelize.DATE,
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
