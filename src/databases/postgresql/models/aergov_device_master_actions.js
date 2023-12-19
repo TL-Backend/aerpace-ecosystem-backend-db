@@ -20,7 +20,9 @@ module.exports = (sequelize, DataTypes) => {
     action_name: DataTypes.STRING,
     action_identifier: DataTypes.STRING,
     device_type: DataTypes.STRING,
-    category_id: DataTypes.INTEGER
+    category_id: DataTypes.INTEGER,
+    created_at: DataTypes.DATE,
+    updated_at: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'aergov_device_master_actions',

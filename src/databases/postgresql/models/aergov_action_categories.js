@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     category_name: DataTypes.STRING,
     category_identifier: DataTypes.STRING,
-    device_type: DataTypes.STRING
+    device_type: DataTypes.STRING,
+    created_at: DataTypes.DATE,
+    updated_at: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'aergov_action_categories',
